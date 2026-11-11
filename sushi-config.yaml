@@ -1,0 +1,85 @@
+id: hl7.fhir.be.workflow
+canonical: https://www.ehealth.fgov.be/standards/fhir/workflow
+url: https://www.ehealth.fgov.be/standards/fhir/workflow
+name: BeWorkflow
+title: "BREW - Belgian Requests & Execution Workflows"
+description: "Belgian guidance for request and Task based workflows in FHIR, adapting the HL7 Clinical Order Workflows (COW) IG: where Tasks are kept, when to use contained resources, and the Task codes used in Belgium."
+status: draft
+license: CC0-1.0
+date: 2026-11-11
+version: 0.1.0
+fhirVersion: 4.0.1
+FSHOnly: false
+applyExtensionMetadataToRoot: false
+copyrightYear: 2026+
+releaseLabel: ci-build
+jurisdiction: urn:iso:std:iso:3166#BE "Belgium"
+
+dependencies:
+  hl7.fhir.be.core: 2.1.2
+  # COW 1.0.0-ballot predates the COW Task codes; pin to a release once COW publishes one.
+  hl7.fhir.uv.cow: current
+
+publisher:
+  name: eHealth Platform
+  url: https://www.ehealth.fgov.be/standards/fhir
+  email: support@be-ehealth-standards.atlassian.net
+
+contact:
+  - name: Message Structure eHealth
+    telecom:
+      - system: email
+        value: support@be-ehealth-standards.atlassian.net
+        use: work
+
+pages:
+  index.md:
+    title: Home
+  task-structure.md:
+    title: Requests and Tasks
+  task-placement.md:
+    title: Where Requests and Tasks Live
+  status.md:
+    title: Status and Progress
+  grouping.md:
+    title: Grouping Requests
+  cancel-modify.md:
+    title: Cancelling and Changing Requests
+  contained-resources.md:
+    title: Contained Resources
+  task-codes.md:
+    title: Task Codes
+  brew-and-cow.md:
+    title: BREW and COW
+  references.md:
+    title: References
+  changes.md:
+    title: Changes
+  downloads.xml:
+    title: Downloads
+
+menu:
+  Home: index.html
+  Guidance:
+    Requests and Tasks: task-structure.html
+    Where Requests and Tasks Live: task-placement.html
+    Status and Progress: status.html
+    Grouping Requests: grouping.html
+    Cancelling and Changing Requests: cancel-modify.html
+    Contained Resources: contained-resources.html
+    Task Codes: task-codes.html
+  Artifacts: artifacts.html
+  About:
+    BREW and COW: brew-and-cow.html
+    References: references.html
+  Downloads: downloads.html
+  Changes: changes.html
+
+parameters:
+  shownav: 'true'
+  apply-contact: 'true'
+  apply-jurisdiction: 'true'
+  apply-publisher: 'true'
+  apply-version: 'true'
+  pin-canonicals: pin-multiples
+  path-history: https://www.ehealth.fgov.be/standards/fhir/workflow/history.html
